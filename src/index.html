@@ -7,6 +7,7 @@
   </head>
   <body>
     <section>
+      <div class="circle"></div>
       <header>
         <a href="#"> <img src="../res/logo.png" class="logo" /></a>
         <ul>
@@ -32,10 +33,47 @@
         </div>
       </div>
       <ul class="thumb">
-        <li><img src="../res/thumb1.png" /></li>
-        <li><img src="../res/thumb2.png" /></li>
-        <li><img src="../res/thumb3.png" /></li>
+        <li>
+          <img
+            src="../res/thumb1.png"
+            onclick="imgSlider('../res/img1.png'); changeCircleColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="../res/thumb2.png"
+            onclick="imgSlider('../res/img2.png'); changeCircleColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="../res/thumb3.png"
+            onclick="imgSlider('../res/img3.png'); changeCircleColor('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="../res/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../res/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../res/instagram.png" /></a>
+        </li>
       </ul>
     </section>
+
+    <script type="text/javascript">
+      function imgSlider(img) {
+        document.querySelector(".starbucks").src = img;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
   </body>
 </html>
